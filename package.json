@@ -1,0 +1,17 @@
+{
+  "name": "Infracloud assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Vikranth Kanumuru",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.3",
+    "shortid": "^2.2.16",
+    "valid-url": "^1.0.9"
+  }
+}
