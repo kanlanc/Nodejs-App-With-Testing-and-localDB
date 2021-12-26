@@ -1,5 +1,7 @@
 ## Infracloud Assignment Vikranth
 
+Built using Expressjs for the backend and lokijs for the database.
+
 To run the application, please use the command:
 
 `npm start`
