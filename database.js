@@ -5,7 +5,7 @@ var db = new loki("db.json");
 db.addCollection("urlList").insert([
   {
     urlCode: "1",
-    longUrl: "https://kanlanc.com/",
+    longUrl: "https://www.kanlanc.com",
     shortUrl: "https://bit.ly/3Fu2qQ5",
   },
 ]);

@@ -25,3 +25,17 @@ describe("POST Create Short URL", () => {
     expect(response.body.message).to.be.eql("Invalid longUrl");
   });
 });
+
+describe("GET Short URL", () => {
+  it("should return long URL", async () => {
+    const response = await request.get("api/url/1");
+    expect(response.status).to.eql(200);
+    expect(response.body.longUrl).to.be.eql("https://www.kanlanc.com");
+  });
+
+  it("should return No URL Found message", async () => {
+    const response = await request.get("api/url/2");
+    expect(response.status).to.eql(404);
+    expect(response.body.message).to.be.eql("No URL Found");
+  });
+});

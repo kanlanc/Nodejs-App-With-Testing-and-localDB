@@ -49,15 +49,15 @@ router.get("/:code", async (req, res) => {
 
       var url = urls.findOne({ urlCode: req.params.code });
       if (url) {
-        return res.json(url);
+        return res.json({ longUrl: url.longUrl });
       } else {
-        return res.status(404).json("No URL Found");
+        return res.status(404).json({ message: "No URL Found" });
       }
     });
   } catch (err) {
     console.log(err);
 
-    res.status(500).json("Server Error");
+    res.status(500).json({ message: "Server Error" });
   }
 });
 
