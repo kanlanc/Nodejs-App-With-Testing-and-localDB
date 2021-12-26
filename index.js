@@ -2,10 +2,8 @@ const express = require("express");
 const validUrl = require("valid-url");
 const shortid = require("shortid");
 
-// instatiate the express app
 const app = express();
 
-// Routes Config
 app.use(
   express.json({
     extended: false,
@@ -14,7 +12,6 @@ app.use(
 
 require("./database");
 
-// app.use("/", require("./routes/redirect"));
 app.use("/api/url", require("./routes/urlRoutes"));
 
 const PORT = process.env.PORT || 3000;

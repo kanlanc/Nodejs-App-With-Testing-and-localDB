@@ -2,7 +2,6 @@ const express = require("express");
 const validUrl = require("valid-url");
 const shortid = require("shortid");
 
-// creating express route handler
 const router = express.Router();
 
 const db = require("../utils/db");
