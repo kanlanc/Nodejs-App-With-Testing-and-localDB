@@ -14,9 +14,8 @@ app.use(
 
 require("./database");
 
-// Two routes one for post and one for get
-app.use("/", require("./routes/redirect"));
-app.use("/api/url", require("./routes/url"));
+// app.use("/", require("./routes/redirect"));
+app.use("/api/url", require("./routes/urlRoutes"));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`server started, listening PORT ${PORT}`));
