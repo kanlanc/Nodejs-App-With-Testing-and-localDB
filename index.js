@@ -16,3 +16,5 @@ app.use("/api/url", require("./routes/urlRoutes"));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`server started, listening PORT ${PORT}`));
+
+module.exports = app;

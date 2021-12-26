@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "jest --runInBand ./test"
+    "test": "mocha"
   },
   "author": "Vikranth Kanumuru",
   "license": "ISC",
@@ -16,10 +16,9 @@
     "shortid": "^2.2.16",
     "valid-url": "^1.0.9"
   },
-  "jest": {
-    "testEnvironment": "node"
-  },
   "devDependencies": {
-    "jest": "^27.4.5"
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "supertest": "^6.1.6"
   }
 }

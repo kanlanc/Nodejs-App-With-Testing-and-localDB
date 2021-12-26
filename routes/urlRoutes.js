@@ -29,16 +29,16 @@ router.post("/shorten", async (req, res) => {
           let url = urls.insert({ longUrl, shortUrl, urlCode });
 
           db.save();
-          return res.json({ shortUrl: url.shortUrl });
+          return res.status(200).json({ shortUrl: url.shortUrl });
         }
         res.json(url);
       });
     } catch (err) {
       console.log(err);
-      res.status(500).json("Server Error");
+      res.status(500).json({ message: "Server Error" });
     }
   } else {
-    res.status(401).json("Invalid longUrl");
+    res.status(401).json({ message: "Invalid longUrl" });
   }
 });
 
