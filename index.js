@@ -12,6 +12,8 @@ app.use(
   })
 );
 
+require("./database");
+
 // Two routes one for post and one for get
 app.use("/", require("./routes/redirect"));
 app.use("/api/url", require("./routes/url"));
